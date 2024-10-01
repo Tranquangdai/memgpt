@@ -11,10 +11,7 @@ import numpy as np
 # from llama_index.embeddings.base import BaseEmbedding
 # from llama_index.embeddings.huggingface_utils import format_text
 import tiktoken
-from llama_index.core import Document as LlamaIndexDocument
 
-# from llama_index.core.base.embeddings import BaseEmbedding
-from llama_index.core.node_parser import SentenceSplitter
 
 from memgpt.constants import (
     EMBEDDING_TO_TOKENIZER_DEFAULT,
@@ -27,6 +24,9 @@ from memgpt.utils import is_valid_url, printd
 
 
 def parse_and_chunk_text(text: str, chunk_size: int) -> List[str]:
+    from llama_index.core import Document as LlamaIndexDocument
+    from llama_index.core.node_parser import SentenceSplitter
+
     parser = SentenceSplitter(chunk_size=chunk_size)
     llama_index_docs = [LlamaIndexDocument(text=text)]
     nodes = parser.get_nodes_from_documents(llama_index_docs)
