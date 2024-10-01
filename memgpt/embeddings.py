@@ -4,12 +4,6 @@ from typing import Any, List, Optional
 
 import numpy as np
 
-# from llama_index.core.base.embeddings import BaseEmbedding
-# from llama_index.core.embeddings import BaseEmbedding
-# from llama_index.core.base.embeddings.base import BaseEmbedding
-# from llama_index.bridge.pydantic import PrivateAttr
-# from llama_index.embeddings.base import BaseEmbedding
-# from llama_index.embeddings.huggingface_utils import format_text
 import tiktoken
 
 

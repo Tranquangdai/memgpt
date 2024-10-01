@@ -1,7 +1,6 @@
 from typing import Dict, Iterator, List, Optional, Tuple
 
 import typer
-from llama_index.core import Document as LlamaIndexDocument
 
 from memgpt.agent_store.storage import StorageConnector
 from memgpt.data_types import Document, EmbeddingConfig, Passage, Source
@@ -147,6 +146,7 @@ class DirectoryConnector(DataConnector):
         # use llama index to run embeddings code
         # from llama_index.core.node_parser import SentenceSplitter
         from llama_index.core.node_parser import TokenTextSplitter
+        from llama_index.core import Document as LlamaIndexDocument
 
         parser = TokenTextSplitter(chunk_size=chunk_size)
         for document in documents:
