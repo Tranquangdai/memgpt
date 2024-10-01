@@ -4,6 +4,7 @@ import os
 import yaml
 
 from memgpt.constants import MEMGPT_DIR
+from pathlib import Path
 
 
 def is_valid_yaml_format(yaml_data, function_set):
@@ -57,9 +58,8 @@ def load_all_presets():
     ## Load the user-provided presets
     # ~/.memgpt/presets/*.yaml
     user_presets_dir = os.path.join(MEMGPT_DIR, "presets")
-    # Create directory if it doesn't exist
-    if not os.path.exists(user_presets_dir):
-        os.makedirs(user_presets_dir)
+    directory = Path(user_presets_dir)
+    directory.mkdir(parents=True, exist_ok=True)
     # Construct the path pattern
     user_path_pattern = os.path.join(user_presets_dir, "*.yaml")
     # Listing all YAML files
