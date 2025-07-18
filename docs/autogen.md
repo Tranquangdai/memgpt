@@ -10,11 +10,11 @@ category: 6580dab16cade8003f996d17
 >
 > You can also check the [GitHub discussion page](https://github.com/cpacker/MemGPT/discussions/65), but the Discord server is the official support channel and is monitored more actively.
 
-> ⚠️ Tested with `pyautogen` v0.2.0
+> ⚠️ Tested with `ag2` v0.2.0
 >
 > The MemGPT+AutoGen integration was last tested using AutoGen version v0.2.0.
 >
-> If you are having issues, please first try installing the specific version of AutoGen using `pip install pyautogen==0.2.0` (or `poetry install -E autogen` if you are using Poetry).
+> If you are having issues, please first try installing the specific version of AutoGen using `pip install ag2==0.2.0` (or `poetry install -E autogen` if you are using Poetry).
 
 ## Overview
 
@@ -130,7 +130,7 @@ Now we're going to integrate MemGPT and AutoGen by creating a special "MemGPT Au
 First, make sure you have AutoGen installed:
 
 ```sh
-pip install pyautogen
+pip install ag2
 ```
 
 Going back to the example we first mentioned, [examples/agent_groupchat.py](https://github.com/cpacker/MemGPT/blob/main/memgpt/autogen/examples/agent_groupchat.py) contains an example of a groupchat where one of the agents is powered by MemGPT.
